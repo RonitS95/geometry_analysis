@@ -28,13 +28,13 @@ before_install:
   - ulimit -a
 
     # Install the Python environment
-  - source geometry_analysis/devtools/travis-ci/before_install.sh
+  - source MolSSI/geometry_analysis/devtools/travis-ci/before_install.sh
   - python -V
 
 install:
 
     # Create test environment for package
-  - python devtools/scripts/create_conda_env.py -n=test -p=$PYTHON_VER geometry_analysis/devtools/conda-envs/test_env.yaml
+  - python devtools/scripts/create_conda_env.py -n=test -p=$PYTHON_VER MolSSI/geometry_analysis/devtools/conda-envs/test_env.yaml
     # Activate the test environment
   - conda activate test
     # Build and install package
